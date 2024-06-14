@@ -1,0 +1,73 @@
+.shoeContainer,
+.img {
+  display: flex;
+  gap: 5rem;
+}
+
+.shoeContainer {
+  padding: 100px;
+}
+
+.SmallPictures {
+  display: flex;
+  flex-direction: column;
+}
+
+.SmallPictures img {
+  width: 4rem;
+  cursor: pointer;
+}
+
+.SmallPictures img:hover {
+  border: 1px solid var(--secondary-color);
+}
+
+.BigPicture img {
+  width: 35rem;
+}
+
+.shoeColors {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.shoeColors img {
+  width: 4rem;
+  cursor: pointer;
+}
+
+.selectedColor {
+  border: 2px solid var(--secondary-color);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.buttons button {
+  height: 4rem;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.addToCart {
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
+.favourite {
+  border: 1px solid var(--secondary-color);
+}
+
+.favourite:hover {
+  border: 3px solid var(--secondary-color);
+}
+
+.addToCart:hover {
+  color: var(--primary-color);
+}
