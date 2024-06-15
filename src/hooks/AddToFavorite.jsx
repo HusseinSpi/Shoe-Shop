@@ -11,11 +11,19 @@ export const addToFavorite = async (email, shoe) => {
     const user = users.find((user) => user.email === email);
 
     if (user) {
-      user.favorite.push(shoe);
+      const isShoeInFavorites = user.favorite.some(
+        (favoriteShoe) => favoriteShoe.id === shoe.id
+      );
 
-      await axios.put(`${usersUrl}/${user.id}`, user);
+      if (isShoeInFavorites) {
+        toast.warn("The shoe is already in the favorite list");
+      } else {
+        user.favorite.push(shoe);
 
-      toast.success("The shoe has been added to the favorite successfully");
+        await axios.put(`${usersUrl}/${user.id}`, user);
+
+        toast.success("The shoe has been added to the favorite successfully");
+      }
     } else {
       toast.error("Couldn't find the user");
     }

@@ -11,11 +11,19 @@ export const addToCart = async (email, shoe) => {
     const user = users.find((user) => user.email === email);
 
     if (user) {
-      user.cart.push(shoe);
+      const isShoeInCart = user.cart.some(
+        (shoeCart) => shoeCart.id === shoe.id
+      );
 
-      await axios.put(`${usersUrl}/${user.id}`, user);
+      if (isShoeInCart) {
+        toast.warn("The shoe is already in the cart");
+      } else {
+        user.cart.push(shoe);
 
-      toast.success("The shoe has been added to the cart successfully");
+        await axios.put(`${usersUrl}/${user.id}`, user);
+
+        toast.success("The shoe has been added to the cart successfully");
+      }
     } else {
       toast.error("Couldn't find the user");
     }

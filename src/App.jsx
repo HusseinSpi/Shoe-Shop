@@ -6,6 +6,7 @@ import { NoMatch } from "./pages/noMatch/NoMatch";
 import { ShoePage } from "./pages/ShoePage/ShoePage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { CartPage } from "./pages/cart/CartPage";
+import { Favorite } from "./pages/favorite/Favorite";
 
 const routes = [
   {
@@ -27,6 +28,10 @@ const routes = [
       {
         path: "cart",
         element: <CartPage />,
+      },
+      {
+        path: "favorite",
+        element: <Favorite />,
       },
       {
         path: "*",
