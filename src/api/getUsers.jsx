@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const Data = async () => {
+export const userData = async () => {
   const url = "https://666cb3ef49dbc5d7145eea3d.mockapi.io/Users";
 
   try {

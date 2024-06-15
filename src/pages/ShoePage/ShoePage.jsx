@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { CiHeart } from "react-icons/ci";
+import { addToCart } from "../../hooks/AddToCart";
 import axios from "axios";
 import "./ShoePage.css";
 
@@ -9,6 +10,14 @@ export const ShoePage = () => {
   const { shoeId } = useParams();
   const [color, setColor] = useState(0);
   const [shoeImg, setShoeImg] = useState("");
+  const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    const loggedIn = localStorage.getItem("isLogIn");
+    if (loggedIn === "true") {
+      setEmail(localStorage.getItem("userEmail"));
+    }
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -108,7 +117,12 @@ export const ShoePage = () => {
               </div>
             )}
             <div className="buttons">
-              <button className="addToCart">Add to Cart</button>
+              <button
+                className="addToCart"
+                onClick={() => addToCart(email, shoe)}
+              >
+                Add to Cart
+              </button>
               <button className="favourite">
                 Favourite <CiHeart />
               </button>

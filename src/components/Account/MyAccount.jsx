@@ -2,6 +2,7 @@ export const MyAccount = ({ userName }) => {
   const handleLogOut = () => {
     localStorage.removeItem("isLogIn");
     localStorage.removeItem("userName");
+    localStorage.removeItem("userEmail");
     window.location.reload();
   };
 
