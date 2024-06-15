@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { CiHeart } from "react-icons/ci";
 import { addToCart } from "../../hooks/AddToCart";
+import { addToFavorite } from "../../hooks/AddToFavorite";
 import axios from "axios";
 import "./ShoePage.css";
 
@@ -123,8 +124,11 @@ export const ShoePage = () => {
               >
                 Add to Cart
               </button>
-              <button className="favourite">
-                Favourite <CiHeart />
+              <button
+                className="favorite"
+                onClick={() => addToFavorite(email, shoe)}
+              >
+                Favorite <CiHeart />
               </button>
             </div>
           </div>

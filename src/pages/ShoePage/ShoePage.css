@@ -60,11 +60,11 @@
   color: var(--background-color);
 }
 
-.favourite {
+.favorite {
   border: 1px solid var(--secondary-color);
 }
 
-.favourite:hover {
+.favorite:hover {
   border: 3px solid var(--secondary-color);
 }
 
