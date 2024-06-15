@@ -1,0 +1,62 @@
+.cardsForCart .card {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imageCart img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.details {
+  margin-left: 20px;
+}
+
+.details h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.details .description {
+  font-size: 1em;
+  color: #666;
+}
+
+.details .price {
+  font-size: 1em;
+  margin: 5px 0;
+  font-weight: bold;
+  color: #000;
+}
+
+.buttonsCart {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.love {
+  color: red;
+  border: none;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+
+.delete {
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+
+.love:hover {
+  font-size: 2.5rem;
+}
+
+.delete:hover {
+  font-size: 2rem;
+}

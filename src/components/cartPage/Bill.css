@@ -1,0 +1,49 @@
+.bill-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.bill-item,
+.bill-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.bill-total {
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.checkout-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.checkout-button.guest {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.checkout-button.member {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.checkout-button.paypal {
+  background-color: #f0f0f0;
+  color: #009de1;
+  font-size: 20px;
+}
+
+.PayDark {
+  color: #113984;
+}

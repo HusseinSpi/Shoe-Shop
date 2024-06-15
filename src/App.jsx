@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { NoMatch } from "./pages/noMatch/NoMatch";
 import { ShoePage } from "./pages/ShoePage/ShoePage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { CartPage } from "./pages/cart/CartPage";
 
 const routes = [
   {
@@ -22,6 +23,10 @@ const routes = [
       {
         path: "shoes/:shoeId",
         element: <ShoePage />,
+      },
+      {
+        path: "cart",
+        element: <CartPage />,
       },
       {
         path: "*",
