@@ -4,7 +4,6 @@ import { AddUser } from "../../hooks/AddUsers";
 import { LoginForm } from "../../components/LoginForm/LoginForm";
 import "./LoginPage.css";
 import { MyAccount } from "../../components/Account/MyAccount";
-import { getUserName } from "../../hooks/GetUserName";
 import { useAccount } from "../../context/Account";
 
 export const LoginPage = () => {
@@ -38,7 +37,6 @@ export const LoginPage = () => {
           if (await Check(email, password)) {
             setIsLogIn(true);
             localStorage.setItem("isLogIn", "true");
-            localStorage.setItem("userName", await getUserName(email));
           }
         } catch (error) {
           console.error("Login error:", error);

@@ -60,11 +60,13 @@
   color: var(--background-color);
 }
 
-.favorite {
+.favorite,
+.edit {
   border: 1px solid var(--secondary-color);
 }
 
-.favorite:hover {
+.favorite:hover,
+.edit:hover {
   border: 3px solid var(--secondary-color);
 }
 

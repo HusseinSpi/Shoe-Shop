@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+import "./MyAccount.css";
+
 export const MyAccount = ({ userName }) => {
+  const navigate = useNavigate();
+
   const handleLogOut = () => {
     localStorage.removeItem("isLogIn");
     localStorage.removeItem("userName");
@@ -8,9 +13,14 @@ export const MyAccount = ({ userName }) => {
 
   return (
     <>
-      <h1>Welcome {userName}</h1>
-      <div className="submit" onClick={handleLogOut}>
-        Log Out
+      <h1 style={{ textAlign: "center" }}>Welcome {userName}</h1>
+      <div className="buttonsAccount">
+        <button className="submit" onClick={() => navigate("/add-shoe")}>
+          Add Shoe
+        </button>
+        <button className="submit" onClick={handleLogOut}>
+          Log Out
+        </button>
       </div>
     </>
   );

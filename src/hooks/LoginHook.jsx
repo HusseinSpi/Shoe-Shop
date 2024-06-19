@@ -7,6 +7,8 @@ export const LoginHook = async (email, password) => {
       const user = users[i];
       if (user.email === email && user.password === password) {
         localStorage.setItem("userEmail", user.email);
+        localStorage.setItem("userName", user.name);
+        localStorage.setItem("isAdmin", user.admin);
         return true;
       }
     }

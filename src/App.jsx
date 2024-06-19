@@ -7,6 +7,7 @@ import { ShoePage } from "./pages/ShoePage/ShoePage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { CartPage } from "./pages/cart/CartPage";
 import { Favorite } from "./pages/favorite/Favorite";
+import { FormAddShoe } from "./pages/form/FormAddShoe";
 
 const routes = [
   {
@@ -32,6 +33,10 @@ const routes = [
       {
         path: "favorite",
         element: <Favorite />,
+      },
+      {
+        path: "add-shoe",
+        element: <FormAddShoe />,
       },
       {
         path: "*",

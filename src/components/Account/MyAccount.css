@@ -1,0 +1,9 @@
+.buttonsAccount {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.buttonsAccount .submit {
+  border: none;
+}
