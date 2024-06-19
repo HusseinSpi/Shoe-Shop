@@ -8,6 +8,7 @@ export const MyAccount = ({ userName }) => {
     localStorage.removeItem("isLogIn");
     localStorage.removeItem("userName");
     localStorage.removeItem("userEmail");
+    localStorage.removeItem("isAdmin");
     window.location.reload();
   };
 
