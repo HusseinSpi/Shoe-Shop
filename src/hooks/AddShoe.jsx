@@ -1,7 +1,6 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Data } from "../api/getData";
 
 export const AddShoe = async (
   name,
@@ -11,14 +10,13 @@ export const AddShoe = async (
   description,
   images
 ) => {
-  const shoes = await Data();
-  const id = shoes[shoes.length - 1].id + 1;
+  console.log(images);
   if (name && url && price && colors && description && images) {
+    console.log(name, url, price, colors, description, images);
     try {
       const response = await axios.post(
         "https://666c683149dbc5d7145deb82.mockapi.io/Shose",
         {
-          id: parseInt(id),
           name: name,
           url: url,
           price: parseFloat(price),

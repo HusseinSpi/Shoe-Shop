@@ -16,7 +16,7 @@ export const FormAddShoe = () => {
     e.preventDefault();
     setLoading(true);
     const imagesArray = shoeImages.split("|").map((image) => image.trim());
-    await AddShoe(shoeName, shoeUrl, price, details, imagesArray);
+    await AddShoe(shoeName, shoeUrl, price, 1, details, imagesArray);
     setLoading(false);
   };
 
